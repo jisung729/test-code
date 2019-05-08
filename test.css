@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+a {text-decoration: none; color:inherit; margin: 0; padding: 0; bottom: 0; vertical-align: baseline;
+  background-color: transparent; text-decoration: none; display: inline-block; }
+  img{vertical-align: bottom;}
+  ul li {list-style: none; margin: 0; padding: 0;}
+  
+  body {line-height: 1; font-family: "Noto Sans KR","Montserrat", sans-serif;
+    margin: 0;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size: 1rem;font-weight: 400;line-height: 1.5;color: #212529;text-align: left;background-color: #fff;}
+  html { height: 100%; box-sizing: border-box; overflow-x: hidden;}
+  
+/* =====================================
+          GRID SYSTEM
+===================================== */
+
+[class*="col-"] {
+ float: left;
+ box-sizing: border-box;
+ padding: 0 10px;
+}
+
+@media(min-width:768px){
+  .col-m-1  {width: 8.33%;}
+  .col-m-2  {width: 16.66%;}
+  .col-m-3  {width: 25%;}
+  .col-m-4  {width: 33.33%;}
+  .col-m-5  {width: 41.66%;}
+  .col-m-6  {width: 50%;}
+  .col-m-7  {width: 58.33%;}
+  .col-m-8  {width: 66.66%;}
+  .col-m-9  {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
+  }
+  @media(min-width:1024px){
+      .col-t-1  {width: 8.33%;}
+      .col-t-2  {width: 16.66%;}
+      .col-t-3  {width: 25%;}
+      .col-t-4  {width: 33.33%;}
+      .col-t-5  {width: 41.66%;}
+      .col-t-6  {width: 50%;}
+      .col-t-7  {width: 58.33%;}
+      .col-t-8  {width: 66.66%;}
+      .col-t-9  {width: 75%;}
+      .col-t-10 {width: 83.33%;}
+      .col-t-11 {width: 91.66%;}
+      .col-t-12 {width: 100%;}
+  }
+  @media(min-width:1280px){
+      .col-d-1  {width: 8.33%;}
+      .col-d-2  {width: 16.66%;}
+      .col-d-3  {width: 25%;}
+      .col-d-4  {width: 33.33%;}
+      .col-d-5  {width: 41.66%;}
+      .col-d-6  {width: 50%;}
+      .col-d-7  {width: 58.33%;}
+      .col-d-8  {width: 66.66%;}
+      .col-d-9  {width: 75%;}
+      .col-d-10 {width: 83.33%;}
+      .col-d-11 {width: 91.66%;}
+      .col-d-12 {width: 100%;}
+  }
+
+
+/* =====================================
+          COMMON SYSTEM
+===================================== */
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.layout--center {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.layout--table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.layout--table-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* =====================================
+       utility
+===================================== */
+.padding-0 {padding: 0;}
+
+/* =====================================
+       design
+===================================== */
+.slide{
+  height:300px;
+  overflow:hidden;
+}
+    .slide ul{
+      width:calc(100% * 4);
+      display:flex;
+      animation:slide 16s infinite;
+    } /* slide를 8초동안 진행하며 무한반복 함 */
+    .slide li{
+      width: 25%;
+      height:300px;
+      padding: 0 100px;;
+    }
+    .slide li:nth-child(1){background:#ffa;}
+    .slide li:nth-child(2){background:#faa;}
+    .slide li:nth-child(3){background:#afa;}
+    .slide li:nth-child(4){background:#aaf;}
+    .slide li:nth-child(5){background:#ffa;}
+    .slide li:nth-child(6){background:#faa;}
+    .slide li:nth-child(7){background:#afa;}
+    .slide li:nth-child(8){background:#aaf;}
+    .slide li:nth-child(9){background:#ffa;}
+    .slide li:nth-child(10){background:#faa;}
+    .slide li:nth-child(11){background:#afa;}
+    .slide li:nth-child(12){background:#aaf;}
+    .slide li:nth-child(13){background:#ffa;}
+    .slide li:nth-child(14){background:#faa;}
+    .slide li:nth-child(15){background:#afa;}
+    .slide li:nth-child(4n+1){margin-left: 20px;}
+    .slide li:nth-child(4n){margin-right: 20px;}
+    
+    @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      20% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      45% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      70% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      95% {margin-left:-300%;}
+      100% {margin-left:0;}
+    }
